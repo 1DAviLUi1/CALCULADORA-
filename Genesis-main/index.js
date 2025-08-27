@@ -40,7 +40,7 @@ const db = new sqlite3.Database('./database.db', (err) => {
                 cidade TEXT,
                 bairro TEXT,
                 estado TEXT,
-                cgm TEXT,
+                cgm TEXT UNIQUE,
                 curso TEXT NOT NULL,
                 periodo TEXT,
                 turno TEXT NOT NULL,

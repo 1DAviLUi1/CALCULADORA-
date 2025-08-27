@@ -44,6 +44,6 @@ async function cadastrarfuncionario(event) {
         }
     } catch (err) {
         console.error('Erro na solicitação:', err);
-        alert('Erro ao cadastrar cliente.');
+        alert('Erro ao cadastrar funcionario.');
     }
 }

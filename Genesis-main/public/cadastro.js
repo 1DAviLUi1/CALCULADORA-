@@ -59,9 +59,9 @@ async function listarAlunos() {
 
     let url = '/alunos';  // URL padrão para todos os alunos
 
-    if (cpf) {
+    if (cgm) {
         // Se CPF foi digitado, adiciona o parâmetro de consulta
-        url += `?cpf=${cpf}`;
+        url += `?cgm=${cgm}`;
     }
 
     try {
@@ -79,6 +79,7 @@ async function listarAlunos() {
                 const linha = document.createElement('tr');
                 linha.innerHTML = `
                     <td>${aluno.nome}</td>
+                    <td>${aluno.cgm}</td>
                     <td>${aluno.cpf}</td>
                     <td>${aluno.email}</td>
                     <td>${respo.telefone}</td>
@@ -106,7 +107,7 @@ async function atualizarAluno() {
     };
 
     try {
-        const respo = await fetch(`/alunos/cpf/${cpf}`, {
+        const respo = await fetch(`/alunos/cgm/${cgm}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
